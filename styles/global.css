@@ -27,3 +27,7 @@
     --paragraph: 500 1rem/1.25rem var(--font);
     --link: 500 0.875rem/1rem var(--font);
 }
+
+body {
+    background-color: var(--background-primary);
+}
