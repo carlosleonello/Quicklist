@@ -123,6 +123,10 @@ h1 {
     gap: 0.5rem;
 }
 
+.removal-alert[hidden] {
+    display: none;
+}
+
 .removal-alert > img {
     filter: brightness(0) invert(1);
 }

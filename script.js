@@ -1,6 +1,9 @@
 const form = document.querySelector(".add-item-form")
 const itemInput = document.querySelector(".add-item-form input")
 const shoppingList = document.querySelector(".shopping-list")
+const removalAlert = document.querySelector(".removal-alert")
+const closeAlertButton = document.querySelector(".close-alert")
+let alertTimeOut
 
 form.addEventListener("submit", function (event) {
     event.preventDefault()
@@ -36,4 +39,29 @@ form.addEventListener("submit", function (event) {
     shoppingList.append(item)
 
     itemInput.value = ""
+})
+
+shoppingList.addEventListener("click", function (event) {
+    const removeButton = event.target.closest(".remove-item")
+
+    if (removeButton === null) {
+        return
+    }
+
+    const itemToRemove = removeButton.closest(".shopping-item")
+
+    itemToRemove.remove()
+
+    clearTimeout(alertTimeOut)
+    removalAlert.hidden = false
+
+    alertTimeOut = setTimeout (function () {
+        removalAlert.hidden = true
+    }, 3000)
+})
+
+closeAlertButton.addEventListener("click", function (event) {
+    removalAlert.hidden = true
+
+    clearTimeout(alertTimeOut)
 })
