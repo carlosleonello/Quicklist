@@ -2,6 +2,7 @@ main {
     margin-top: 3.875rem;
     max-width: 39.1875rem;
     margin-inline: auto;
+    width: calc(100% - 3rem);
 }
 
 .back-button {
@@ -92,6 +93,10 @@ h1 {
     color: var(--content-secondary);
 }
 
+.shopping-item input:checked + span {
+    text-decoration: line-through;
+}
+
 .remove-item {
     height: 2rem;
     width: 2rem;
@@ -132,4 +137,18 @@ h1 {
 
 .close-alert img {
     filter: brightness(0) invert(1);
+}
+
+@media (max-width: 40rem) {
+    .add-item-form {
+        flex-direction: column;
+    }
+
+    .add-item-form button {
+        width: 100%;
+    }
+
+    .add-item-form input {
+        flex: none;
+    }
 }
