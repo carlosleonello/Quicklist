@@ -1,74 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
     <title>Quicklist | Lista de Compras</title>
-</head>
-<body>
+  </head>
+  
+  <body>
     <header>
-        <a href="#">
-            <img src="logo.svg" alt="logo Quicklist">
-        </a>
+      <a href="#">
+        <img src="logo.svg" alt="logo Quicklist" />
+      </a>
     </header>
 
     <main>
-        <button type="button" class="back-button">
-            <img src="assets/link button.svg" alt="Voltar">
+      <button type="button" class="back-button">
+        <img src="assets/link button.svg" alt="Voltar" />
+      </button>
+
+      <h1>Compras da semana</h1>
+
+      <form class="add-item-form">
+        <input
+          type="text"
+          placeholder="Adicione um novo item"
+          aria-label="Novo item"
+        />
+        <button type="submit">Adicionar item</button>
+      </form>
+
+      <ul class="shopping-list">
+        <li class="shopping-item">
+          <label>
+            <input type="checkbox" />
+            <span>Pão de forma</span>
+          </label>
+          <button type="button" class="remove-item">
+            <img src="assets/trash.svg" alt="remover" />
+          </button>
+        </li>
+
+        <li class="shopping-item">
+          <label>
+            <input type="checkbox" />
+            <span>Café preto</span>
+          </label>
+          <button type="button" class="remove-item">
+            <img src="assets/trash.svg" alt="remover" />
+          </button>
+        </li>
+
+        <li class="shopping-item">
+          <label>
+            <input type="checkbox" />
+            <span>Suco de laranja</span>
+          </label>
+          <button type="button" class="remove-item">
+            <img src="assets/trash.svg" alt="remover" />
+          </button>
+        </li>
+
+        <li class="shopping-item">
+          <label>
+            <input type="checkbox" />
+            <span>Bolacha</span>
+          </label>
+          <button type="button" class="remove-item">
+            <img src="assets/trash.svg" alt="remover" />
+          </button>
+        </li>
+      </ul>
+
+      <div class="removal-alert" role="status">
+        <img src="assets/warning-circle-filled.svg" alt="">
+        <span>O item foi removido da lista</span>
+        <button type="button" class="close-alert" aria-label="Fechar aviso">
+            <img src="assets/delete-small.svg" alt="">
         </button>
-
-        <h1>Compras da semana</h1>
-
-        <form class="add-item-form">
-            <input type="text" placeholder="Adicione um novo item" aria-label="Novo item">
-            <button type="submit">Adicionar item</button>
-        </form>
-
-        <ul class="shopping-list">
-            <li class="shopping-item">
-                <label>
-                    <input type="checkbox">
-                    <span>Pão de forma</span>
-                </label>
-                <button type="button" class="remove-item">
-                    <img src="assets/trash.svg" alt="remover">
-                </button>
-            </li>
-
-                        <li class="shopping-item">
-                <label>
-                    <input type="checkbox">
-                    <span>Café preto</span>
-                </label>
-                <button type="button" class="remove-item">
-                    <img src="assets/trash.svg" alt="remover">
-                </button>
-            </li>
-
-                        <li class="shopping-item">
-                <label>
-                    <input type="checkbox">
-                    <span>Suco de laranja</span>
-                </label>
-                <button type="button" class="remove-item">
-                    <img src="assets/trash.svg" alt="remover">
-                </button>
-            </li>
-
-                        <li class="shopping-item">
-                <label>
-                    <input type="checkbox">
-                    <span>Bolacha</span>
-                </label>
-                <button type="button" class="remove-item">
-                    <img src="assets/trash.svg" alt="remover">
-                </button>
-            </li>
-        </ul>
+      </div>
     </main>
-</body>
+  </body>
 </html>
